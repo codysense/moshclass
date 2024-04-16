@@ -485,7 +485,10 @@ a{
       display: grid;
       
   }
-  
+  .grid--1x3{
+    grid-template-columns: repeat(3,1fr);
+} 
+
   @media screen and (min-width:768px) {
       .grid--1x2{
           grid-template-columns: repeat(2, 1fr);
@@ -775,6 +778,28 @@ a{
     margin: 0 auto;
 }
 
- .grid--1x3{
-    grid-template-columns: repeat(3,1fr);
-} 
+/* Features */
+.feature{
+    gap: 4rem 2rem;
+    margin: 5rem 0;
+}
+.feature__heading{
+    margin: 1.5rem 0;
+}
+
+.feature__img{
+    width: 100%;  
+}
+
+.feature:first-of-type{
+    margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    .feature:nth-of-type(even) .feature__content{
+        order: 2;
+    }
+}
+ 
+
+
